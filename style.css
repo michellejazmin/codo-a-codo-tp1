@@ -48,8 +48,8 @@ header {
 }
 
 #navbar ul li a:hover {
-  color: #41a9c4;
-  border-bottom: 2px solid #41a9c4;
+  color: #41a9c4; 
+  border-bottom: 2px solid #41a9c4; /* la animación parpadea cuando el borde es de 2px, pero no con 1px */
   transition: ease;
   transition-duration: 200ms;
 }
