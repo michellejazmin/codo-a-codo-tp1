@@ -1,0 +1,141 @@
+:root {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+header {
+  height: 100vh;
+}
+
+#navbar {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+}
+
+#navbar ul {
+  margin: 0.8rem 0 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+#navbar ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  padding: 0;
+  border: none;
+}
+
+#navbar ul li a {
+  margin: 0;
+  padding: 1rem;
+  border: none;
+  text-decoration: none;
+  color:white
+}
+
+#navbar ul li a:hover {
+  color: #41a9c4;
+  border-bottom: 2px solid #41a9c4;
+  transition: ease;
+  transition-duration: 200ms;
+}
+
+#navbar ul li a:active {
+  color: #6803bb;
+  border-bottom: 2px solid #6803bb;
+}
+
+h1 {
+  display: inline-block;
+  margin: 100px 0 10px 20px;
+  border: none;
+  font-size: 5rem;
+  background-image: linear-gradient(90deg, #6803bb, #41a9c4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: left;
+}
+
+header p {
+  margin: 10px 0 10px 20px;
+  padding: 0;
+  border: none;
+  font-size: 2rem;
+  color: #aad1db;
+  text-align: left;
+}
+
+#socials {
+  display: inline-block;
+  position: sticky;
+  background-color: #41a9c4;
+  text-align: right;
+  margin: auto 0;
+  padding: 5px;
+  border: none;
+  border-radius: 12px 0 0 12px;
+}
+
+#socials {
+  height: 40vh;
+  width: 42px;
+  list-style-type: none;
+  float: right;
+  position: fixed;
+  top: 25vh;
+  bottom: auto;
+  right: 0;
+  vertical-align: middle;
+}
+
+#socials li {
+  margin: 10px;
+  padding: 0;
+  border: none;
+  display: block;
+}
+
+#socials li a {
+  text-decoration: none;
+  display: block;
+}
+
+main {
+  margin: 1rem;
+  padding: 0;
+  border: none;
+}
+
+aside {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid white;
+}
+
+footer {
+  margin: auto;
+  text-align: center;
+}
+
+footer ul {
+  display: block;
+}
+
+footer ul li {
+  display: inline-block;
+}
