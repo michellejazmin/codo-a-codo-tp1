@@ -17,6 +17,10 @@ body {
   min-height: 100vh;
   /*cambiar por la imagen se saca*/
   background-color: black;
+  /*!Hacer que sea una sola imagen y cambiarla quedo feo*/
+  background-image: url('../img/planet.jpg');
+
+  
 }
 
 body::-webkit-scrollbar{
@@ -128,14 +132,15 @@ header {
   height: 7rem;  
   color: var(--primary-text);
   text-decoration: none;
-  filter: grayscale(100%) opacity(0.7);
-  transition: 500ms ease;
+  filter: grayscale(90%) opacity(0.7);
+  transition: 500ms ease-out;
 }
 
 .item_link:hover{
   filter: grayscale(0%) opacity(1);
   background-color: rgba(255, 255, 255, 0.147);
   color: var(--secondary-text);
+  height:150px;
 }
 
 .link_text{
@@ -190,55 +195,15 @@ header p {
   text-align: left;
 }
 
-#socials {
-  display: inline-block;
-  position: sticky;
-  background-color: #41a9c4;
-  text-align: right;
-  margin: auto 0;
-  padding: 5px;
-  border: none;
-  border-radius: 12px 0 0 12px;
-}
-
-#socials {
-  height: 40vh;
-  width: 42px;
-  list-style-type: none;
-  float: right;
-  position: fixed;
-  top: 25vh;
-  bottom: auto;
-  right: 0;
-  vertical-align: middle;
-}
-
-#socials li {
-  margin: 10px;
-  padding: 0;
-  border: none;
-  display: block;
-}
-
-#socials li a {
-  text-decoration: none;
-  display: block;
-}
-
 main{
   overflow: auto;
-  padding: 1rem 0rem 1rem 6rem;/*Para que la barra no sobralape el texto*/
+  /*!Para que la barra no sobralape el texto*/
+  padding: 1rem 0rem 1rem 6rem;
   margin: 0;
   background-image: url(./img/asteroid.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: 0;
-}
-
-aside {
-  margin: 1rem;
-  padding: 1rem;
-  border: 1px solid white;
 }
 
 
@@ -271,50 +236,9 @@ footer{
 
 .footer_bar_icons{
   color: rgba(255, 255, 255, 0.704);
-  transition: 500ms ease;
+  transition: 700ms ease;
 }
 
 .footer_bar_icons:hover{
-  color: white;
+  color: rgb(218, 30, 30);
 }
-
-
-
-
-
-.login{
-  position: relative;
-}
-
-.login_list{
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0;
-  margin: 0;
-}
-
-.login_link{
-  margin-right: 2rem;
-}
-
-.login_button{
-  border: none;
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  background-color: rgba(13, 6, 223, 0.688);
-  transition: 500ms ease;
-  font-size: 1rem;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 600;
-}
-
-.login_button:hover{
-  background-color: rgba(13, 6, 223, 0.526);
-  color: rgba(255, 255, 255, 0.656);
-}
-
-
-
