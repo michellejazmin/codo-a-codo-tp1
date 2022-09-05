@@ -318,17 +318,3 @@ footer{
 
 
 
-
-
-div {
-  align-self: start;
-  width: 90vw;
-  height: 40vh;
-  display: flex;
-  justify-content: center;
- 
-  font-size: 30px;
-  font-weight: bold;
-
- }
-
