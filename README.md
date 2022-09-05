@@ -10,8 +10,8 @@
 [![Banner](https://img.shields.io/badge/Mis%20Codigos-Construccion-orange)]()
 
 ### Informacion del codigo contenido
-- [Link a pagina grupo13()]( grupo13.netlify.app)
+- [Link a pagina grupo13()](grupo13.netlify.app](https://grupo13.netlify.app/#)]
 - TODO: Reparar CSS y borrar tag no necesarias
 
 
-[![LinedIn](https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png)]
+![LinedIn](https://logodownload.org/wp-content/uploads/2019/03/linkedin-logo-6.png)
