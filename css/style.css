@@ -19,6 +19,8 @@ body {
   background-color: black;
   /*!Hacer que sea una sola imagen y cambiarla quedo feo*/
   background-image: url('../img/planet.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 
   
 }
