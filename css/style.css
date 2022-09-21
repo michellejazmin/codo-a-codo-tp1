@@ -7,6 +7,12 @@
   --secondary-bg: rgba(255,255,255);
 } 
 
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   color: rgb(255, 255, 255);
   height: 100%;
@@ -81,13 +87,13 @@ header {
   border: none;
   text-decoration: none;
   color:white
+  
 }
 
 #navbar ul li a:hover {
   color: #41a9c4; 
-  border-bottom: 2px solid #41a9c4; /* la animación parpadea cuando el borde es de 2px, pero no con 1px */
-  transition: ease;
-  transition-duration: 200ms;
+  border-bottom: 1px solid #41a9c4; /* la animación parpadea cuando el borde es de 2px, pero no con 1px */
+  transition: 800ms ease;
 }
 
 #navbar ul li a:active {
@@ -97,7 +103,9 @@ header {
 
 
 /*-------------------------------*/
-.navbar{
+.sidebar{
+  margin-top: 5rem; /*la altura del header para que no se sobrelapens*/
+  padding-bottom: 5rem; /*debe ser igual que el de arriba, para que el icono de abajo de todo se vea*/
   width: 5rem;
   height: 100vh;
   position: fixed;
@@ -106,11 +114,11 @@ header {
   z-index: 2;
 }
 
-.navbar:hover{
-  width: 16rem;
+.sidebar:hover{
+  width: 14rem;
 }
 
-.navbar_list{
+.sidebar_list{
   list-style: none;
   padding: 0;
   margin: 0;
@@ -130,6 +138,7 @@ header {
 
 .item_link{
   display: flex;
+  flex-direction: row;
   align-items: center;
   height: 7rem;  
   color: var(--primary-text);
@@ -142,30 +151,28 @@ header {
   filter: grayscale(0%) opacity(1);
   background-color: rgba(255, 255, 255, 0.147);
   color: var(--secondary-text);
-  height:150px;
 }
 
 .link_text{
   opacity: 0;
-  margin-left: 3rem;
+  margin: auto;
   transition: opacity 750ms ease;
 }
 
-.navbar:hover .link_text{
+.sidebar:hover .link_text{
   opacity: 1;
 }
 
 .link_img{
   width: 5rem;
   border-radius: 0%;
-  margin: 0;
-  padding: 0;  
+  margin: 1rem; 
   transition: transform 600ms ease;
 }
 
 .link_img:hover{
   transform: rotate(360);
-  -webkit-transform: rotate(360deg);   /*Para que funciones en Chrome*/
+  -webkit-transform: rotate(360deg);   /* webkit = Para que funciones en Chrome*/
 }
 
 
@@ -175,18 +182,20 @@ header {
 
 
 
-
 h1 {
-  display: inline-block;
+  font-size: 5rem;  
+  /*  OMITO ESTA PARTE DE LA CLASE PORQUE SE ME CLIPEA LA LETRA
+  display: inline-block;+
   margin: 100px 0 10px 20px;
   border: none;
-  font-size: 5rem;
   background-image: linear-gradient(90deg, #6803bb, #41a9c4);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   text-align: left;
+  */  
 }
+
 
 header p {
   margin: 10px 0 10px 20px;
@@ -200,8 +209,7 @@ header p {
 main{
   overflow: auto;
   /*!Para que la barra no sobralape el texto*/
-  padding: 1rem 0rem 1rem 6rem;
-  margin: 0;
+  margin: 5rem 0rem 0rem 5rem;
   background-image: url(./img/asteroid.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -224,6 +232,8 @@ footer{
 }
 
 .footer_bar{
+  margin: 0;  /*se lo agrego poruqe o sino no me quedan centrado los iconos en el footer*/
+  padding: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -243,4 +253,15 @@ footer{
 
 .footer_bar_icons:hover{
   color: rgb(218, 30, 30);
+}
+
+
+
+
+
+/*-----------------------------------------------------------------*/ /*ACA VA LO DE LA PAGINA DE FAQ*/
+
+.parrafos_faq{
+  padding: 1rem 6rem 1rem 1rem; 
+  font-size: 1.5rem;
 }
