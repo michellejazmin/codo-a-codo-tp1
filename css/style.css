@@ -174,8 +174,73 @@ header {
   transform: rotate(360);
   -webkit-transform: rotate(360deg);   /* webkit = Para que funciones en Chrome*/
 }
+.form-title {
+  margin-top: 1em;
+}
 
+.form-title, .form-subtitle {
+  text-align: center;
+  color: whitesmoke;
+}
 
+.form-subtitle {
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto 2rem;
+  padding: 1em 2em;
+  background-color: #05051b;
+  border-radius: 16px;
+}
+
+fieldset {
+  border: none;
+  padding: 1rem 0;
+}
+
+label {
+  margin: 0.5rem 0;
+}
+
+input, textarea, select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  background-color: whitesmoke;
+  border-radius: 8px;
+}
+
+input, textarea {
+  border: 1px solid #05051b;
+  color: #2e2e2e;
+}
+
+textarea {
+  padding: 0.5rem;
+}
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+input[type="submit"], input[type="reset"] {
+  display: inline-block;
+  width: 20%;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  min-width: 100px;
+}
 
 /*----------------------------------*/
 
