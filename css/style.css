@@ -86,7 +86,7 @@ header {
   padding: 1rem;
   border: none;
   text-decoration: none;
-  color:white
+  color:rgb(165, 41, 41);
   
 }
 
@@ -178,17 +178,31 @@ header {
 /*----------------------------------*/
 
 h1 {
-  font-size: 5rem;  
-  /*  OMITO ESTA PARTE DE LA CLASE PORQUE SE ME CLIPEA LA LETRA
-  display: inline-block;
-  margin: 100px 0 10px 20px;
-  border: none;
-  background-image: linear-gradient(90deg, #6803bb, #41a9c4);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-align: left;
-  */  
+  font-size: 6rem;  
+  text-align: center;
+  color:rgb(165, 41, 41);
+}
+
+.h1contacto{
+  margin-top: 50px;
+}
+
+h2{
+  margin: 30px;
+  color:rgb(165, 41, 41);
+  text-align: center;
+}
+
+p{
+  text-align:center;
+  color:rgb(165, 41, 41);
+  text-align: center;
+  margin: 20px;
+
+}
+
+.formu-col{
+  color:rgb(165, 41, 41);
 }
 
 
