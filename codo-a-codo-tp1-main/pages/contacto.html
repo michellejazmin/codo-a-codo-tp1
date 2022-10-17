@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--HOJA DE ESTILOS BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+    <!--HOJA DE ESTILOS PROPIA-->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Contacto</title>
+</head>
+
+<!--SCRIP PARA EL IONICONS, SON LOS ICONOS DEL FOOTER-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- BARRA SUPERIOR-->
+<!--TODO: REDIRIGIR Y COPIAR DISEÑO--> 
+<header>
+    <nav id="navbar">
+    <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="#">Página interesante</a></li>
+        <li><a href="/pages/about.html">Quiénes somos</a></li>
+        <li><a href="/pages/faq.html">Preguntas frecuentes</a></li>
+        <li><a href="/pages/contacto.html">Contacto</a></li>
+    </ul>
+    </nav>
+</header>
+
+<!-- BARRA LATERAL-->
+    <!--TODO: REDIRIGIR Y COPIAR DISEÑO ELEJIR UNA FONT DIFERENTE--> 
+<nav class="sidebar">
+    <ul class="sidebar_list">
+        <li class="list_item">
+            <a href="./pages/notFounPage.html" class="item_link">
+                <img src="/img/tierra-lateral.png" alt="imagen" class="link_img">
+                <span class="link_text">Tierra</span>
+            </a>
+        </li>
+
+        <li class="list_item">
+                <a href="./pages/notFounPage.html" class="item_link">
+                    <img src="/img/azul-lateral.png" alt="imagen" class="link_img">
+                    <span class="link_text">Azul</span>
+                </a>
+            </li>
+            
+            <li class="list_item">
+                <a href="./pages/notFounPage.html" class="item_link">
+                    <img src="/img/rojo-lateral.png" alt="imagen" class="link_img">
+                    <span class="link_text">Rojo</span>
+                </a>
+            </li>
+            
+            <li class="list_item">
+                <a href="./pages/404/NotFoundPage.jsx" class="item_link">
+                    <img src="/img/rojo-lateral.png" alt="imagen" class="link_img">
+                    <span class="link_text">Youtube</span>
+                </a>
+            </li>
+        </ul>
+</nav>
+
+<body>
+    <h1 class="h1contacto">Contacto</h1>
+    <p>Por favor llena este formulario con la información requerida.</p>
+    <form action="">
+        <fieldset>
+            <label class="formu-col" for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" type="text" placeholder=" Ingrese su nombre" required>
+            <label class="formu-col" for="email">Email:</label>
+            <input id="email" name="email" type="email" placeholder=" Ingrese su correo electronico" required>
+            <label class="formu-col" for="telefono">Teléfono:</label>
+            <input class="formu-col" id="telefono" name="telefono" type="phone" placeholder=" Ingrese su numero de telefono">
+            <label class="formu-col" for="referrer">¿Cómo nos conociste?</label>
+            <select id="referrer" name="referrer">
+                <option value="">(elige uno)</option>
+                <option value="1">Un amigo</option>
+                <option value="2">YouTube</option>
+                <option value="3">Twitter</option>
+                <option value="4">Otro</option>
+            </select>
+        </fieldset>
+            <label class="formu-col" for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+        <div class="botones">
+            <button type="submit" class="btn btn-danger" value="Enviar">Enviar</button>
+            <button type="reset" class="btn btn-outline-danger" value="Restablecer">Restablecer</button>
+        </div>
+    </form>
+</body>
+   <!--HOJA DE ESTILOS BOOTSTRAP-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</html>

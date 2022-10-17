@@ -1,0 +1,426 @@
+:root {
+  font-size: 16px;
+  font-family: sans-serif;
+  --primary-text: rgba(172, 171, 171, 0.803);
+  --secondary-text: rgba(255, 255, 255, 0.747);
+  --primary-bg: rgba(0,0,0,);
+  --secondary-bg: rgba(255,255,255);
+} 
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: rgb(255, 255, 255);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /*cambiar por la imagen se saca*/
+  background-color: black;
+  /*!Hacer que sea una sola imagen y cambiarla quedo feo*/
+  background-image: url('../img/planet.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  
+}
+
+body::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;   
+}
+body::-webkit-scrollbar-thumb{
+  background-color: rgba(145, 145, 145, 1);
+  border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+  background-color: rgba(145, 145, 145, 0.7);
+  border-radius: 1rem;
+}
+
+header {
+  z-index: 2;
+  width: 100%;
+  position: fixed;
+}
+
+#navbar {
+  height: 4rem;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.829);
+  position: sticky;
+  top: 0;
+}
+
+#navbar ul {
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+#navbar ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  padding: 0;
+  border: none;
+}
+
+#navbar ul li a {
+  margin: 0;
+  padding: 1rem;
+  border: none;
+  text-decoration: none;
+  color:rgb(165, 41, 41);
+  
+}
+
+#navbar ul li a:hover {
+  color: #41a9c4; 
+  border-bottom: 1px solid #41a9c4; /* la animación parpadea cuando el borde es de 2px, pero no con 1px */
+  transition: 800ms ease;
+}
+
+#navbar ul li a:active {
+  color: #6803bb;
+  border-bottom: 2px solid #6803bb;
+}
+
+
+/*-------------------------------*/
+.sidebar{
+  margin-top: 4rem; /*la altura del header para que no se sobrelapens*/
+  padding-bottom: 5rem; /*debe ser igual que el de arriba, para que el icono de abajo de todo se vea*/
+  width: 7rem;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.633);
+  transition: width 750ms ease;
+  z-index: 2;
+}
+
+.sidebar:hover{
+  width: 14rem;
+}
+
+.sidebar_list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.list_item{
+  width: 100%;
+}
+
+.list_item:last-child{
+  margin-top:auto;
+}
+
+.item_link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 7rem;  
+  color: var(--primary-text);
+  text-decoration: none;
+  filter: grayscale(90%) opacity(0.7);
+  transition: 500ms ease-out;
+}
+
+.item_link:hover{
+  filter: grayscale(0%) opacity(1);
+  background-color: rgba(255, 255, 255, 0.147);
+  color: var(--secondary-text);
+}
+
+.link_text{
+  opacity: 0;
+  margin: auto;
+  transition: opacity 750ms ease;
+}
+
+.sidebar:hover .link_text{
+  opacity: 1;
+}
+
+.link_img{
+  width: 5rem;
+  border-radius: 0%;
+  margin: 1rem; 
+  transition: transform 600ms ease;
+}
+
+.link_img:hover{
+  transform: rotate(360);
+  -webkit-transform: rotate(360deg);   /* webkit = Para que funciones en Chrome*/
+}
+
+/*----------------------------------*/
+
+h1 {
+  font-size: 6rem;  
+  text-align: center;
+  color:rgb(165, 41, 41);
+}
+
+.h1contacto{
+  margin-top: 50px;
+}
+
+h2{
+  margin: 30px;
+  color:rgb(165, 41, 41);
+  text-align: center;
+}
+
+p{
+  text-align:center;
+  color:rgb(165, 41, 41);
+  text-align: center;
+  margin: 20px;
+
+}
+
+.formu-col{
+  color:rgb(165, 41, 41);
+}
+
+
+header p {
+  margin: 10px 0 10px 20px;
+  padding: 0;
+  border: none;
+  font-size: 2rem;
+  color: #aad1db;
+  text-align: left;
+}
+
+main{
+  overflow: auto;
+  /*!Para que la barra no sobralape el texto*/
+  margin: 4rem 0rem 0rem 7rem;
+  background-image: url(./img/asteroid.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 0;
+}
+
+
+footer{
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  height: 3rem;
+  margin-top: auto;
+  clear: both;
+  background-color: rgb(0, 0, 0); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_bar{
+  margin: 0;  /*se lo agrego poruqe o sino no me quedan centrado los iconos en el footer*/
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+} 
+
+.footer_bar_items{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.footer_bar_icons{
+  color: rgba(255, 255, 255, 0.704);
+  transition: 700ms ease;
+}
+
+.footer_bar_icons:hover{
+  color: rgb(218, 30, 30);
+}
+
+/* ---------------------------Página de formulario--------------------------- */
+
+.form-title {
+  margin-top: 1em;
+}
+
+.form-title, .form-subtitle {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.form-subtitle {
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto 2rem;
+  padding: 1em 2em;
+  background-color: #05051b;
+  border-radius: 16px;
+}
+
+fieldset {
+  border: none;
+  padding: 1rem 0;
+}
+
+label {
+  margin-top: 0.8rem;
+}
+
+input, textarea, select {
+  margin: 0.5rem 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  background-color: whitesmoke;
+  border-radius: 8px;
+}
+
+input, textarea {
+  border: 1px solid #05051b;
+  color: #2e2e2e;
+}
+
+textarea {
+  padding: 0.5rem;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem;
+}
+
+input[type="submit"], input[type="reset"] {
+  display: inline-block;
+  width: 20%;
+  height: 2em;
+  font-size: 1rem;
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  min-width: 100px;
+}
+
+
+/*---------------------------Página de about---------------------------*/
+
+.titulos_about{
+  text-align: left;
+  padding: 1rem 1rem 1rem 1rem;
+  color: aliceblue;
+  font-size: 4.5rem;
+}
+.parrafos_about{
+  padding: 1rem 1rem 1rem 1rem; 
+  font-size: 1.5rem;
+  color: aquamarine;
+  text-align: left;
+  text-shadow: 2px 2px 8px black;
+}
+
+/*---------------------------Página de FAQ---------------------------*/
+
+section{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.accordion_item{
+  background-color: #283042;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0.5rem 2px 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.accordion_link{
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  background-color: #283042;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/*icono*/
+.accordion_link i{
+  color:azure;
+  padding: 0.5rem;
+}
+
+.accordion_link .ion-md-remove{
+  display: none;
+}
+
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #212838;
+  transition: max-height 750ms;
+}
+
+.answer::before{
+  content: "";
+  position: absolute;
+  width: 0.6rem;
+  height: 90%;
+  background-color: #8fc460;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.answer p{
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 2rem;
+}
+
+.accordion_item:target .answer{
+  max-height: 20rem;
+}
+
