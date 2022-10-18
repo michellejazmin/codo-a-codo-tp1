@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  font-family: 'Courier Prime', monospace;
+  font-family: 'Kumbh Sans', sans-serif;
   --primary-text: rgba(172, 171, 171, 0.803);
   --secondary-text: rgba(255, 255, 255, 0.747);
   --primary-bg: rgba(0,0,0,);
@@ -13,7 +13,61 @@
   margin: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+
+/*---------------------------INDEX---------------------------*/
+.space{
+  padding: 1rem;
+  background-color: #05051b;
+}
+
+.panel1{
+  padding: 1rem;
+  background-image: url('/img/space1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titulo1{
+  padding: 18rem 0rem 0rem 0rem;
+  text-align: center;
+  font-size: 7.5rem;
+
+}
+
+.subtitulo1{
+  padding: 0rem 0rem 18rem 0rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.panel2{
+  padding: 1rem;
+  background-image: url('/img/stars.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.panel3{
+  padding: 1rem;
+  background-image: url('/img/agujeronegro2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.panel4{
+  padding: 1rem;
+  background-image: url('/img/agujeronegro.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 body {
+  font-family: 'Kumbh Sans', sans-serif;
   color: rgb(255, 255, 255);
   height: 100%;
   margin: 0;
@@ -24,9 +78,9 @@ body {
   /*cambiar por la imagen se saca*/
   background-color: black;
   /*!Hacer que sea una sola imagen y cambiarla quedo feo*/
-  background-image: url('/img/planet.jpg');
+  /*background-image: url('/img/planet.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 body::-webkit-scrollbar{
@@ -47,6 +101,7 @@ header {
   z-index: 2;
   width: 100%;
   position: fixed;
+  margin-left: 2.5rem;
 }
 
 #navbar {
@@ -80,7 +135,7 @@ header {
   padding: 1rem;
   border: none;
   text-decoration: none;
-  color:rgb(72, 41, 165);
+  color:rgb(85, 48, 197);
   
 }
 
@@ -103,7 +158,7 @@ header {
   width: 7rem;
   height: 100vh;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.633);
+  background-color: rgb(0, 0, 0);
   transition: width 750ms ease;
   z-index: 2;
 }
@@ -202,7 +257,7 @@ main{
 footer{
   position: relative;
   width: 100%;
-  z-index: 1;
+  z-index: 0;
   height: 3rem;
   margin-top: auto;
   clear: both;
@@ -235,6 +290,30 @@ footer{
 
 .footer_bar_icons:hover{
   color: rgb(90, 30, 218);
+}
+
+/* ---------------------------BOTON ARRIBA--------------------------- */
+
+.boton_arriba{
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  background-color: #090169;
+  bottom: 50px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.585);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.boton_arriba:active{
+  background-color: #0a016955;
 }
 
 /* ---------------------------Página de formulario--------------------------- */
@@ -325,6 +404,12 @@ input[type="submit"], input[type="reset"] {
   text-shadow: 2px 2px 8px black;
 }
 
+.aboutbackground{
+  background-image: url('/img/skystar.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*---------------------------Página de FAQ---------------------------*/
 
 section{
@@ -401,4 +486,5 @@ section{
 .accordion_item:target .answer{
   max-height: 20rem;
 }
+
 
