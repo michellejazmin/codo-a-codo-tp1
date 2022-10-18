@@ -46,27 +46,23 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 header {
-  height: 5rem;
+  z-index: 2;
   width: 100%;
-  padding-left: 1rem;
   position: fixed;
-  background-color: var(--primary-bg);
-  color: var(--primary-text);
 }
 
 #navbar {
+  height: 4rem;
   display: block;
   margin: 0;
   padding: 10px;
   border: none;
-  background-color: rgba(0, 0, 0, 0.534);
+  background-color: rgba(0, 0, 0, 0.829);
   position: sticky;
   top: 0;
 }
 
 #navbar ul {
-  margin: 0.8rem 0 0;
-  padding: 0;
   border: none;
   text-decoration: none;
   text-align: center;
@@ -104,12 +100,12 @@ header {
 
 /*-------------------------------*/
 .sidebar{
-  margin-top: 5rem; /*la altura del header para que no se sobrelapens*/
+  margin-top: 4rem; /*la altura del header para que no se sobrelapens*/
   padding-bottom: 5rem; /*debe ser igual que el de arriba, para que el icono de abajo de todo se vea*/
-  width: 5rem;
+  width: 7rem;
   height: 100vh;
   position: fixed;
-  background-color: var(--primary-bg);
+  background-color: rgba(0, 0, 0, 0.633);
   transition: width 750ms ease;
   z-index: 2;
 }
@@ -218,7 +214,7 @@ header p {
 main{
   overflow: auto;
   /*!Para que la barra no sobralape el texto*/
-  margin: 5rem 0rem 0rem 5rem;
+  margin: 4rem 0rem 0rem 7rem;
   background-image: url(./img/asteroid.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -336,9 +332,95 @@ input[type="submit"], input[type="reset"] {
 }
 
 
+/*---------------------------Página de about---------------------------*/
+
+.titulos_about{
+  text-align: left;
+  padding: 1rem 1rem 1rem 1rem;
+  color: aliceblue;
+  font-size: 4.5rem;
+}
+.parrafos_about{
+  padding: 1rem 1rem 1rem 1rem; 
+  font-size: 1.5rem;
+  color: aquamarine;
+  text-align: left;
+  text-shadow: 2px 2px 8px black;
+}
+
 /*---------------------------Página de FAQ---------------------------*/
 
-.parrafos_faq{
-  padding: 1rem 6rem 1rem 1rem; 
-  font-size: 1.5rem;
+section{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.container{
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.accordion_item{
+  background-color: #283042;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0.5rem 2px 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.accordion_link{
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  background-color: #283042;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/*icono*/
+.accordion_link i{
+  color:azure;
+  padding: 0.5rem;
+}
+
+.accordion_link .ion-md-remove{
+  display: none;
+}
+
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #212838;
+  transition: max-height 750ms;
+}
+
+.answer::before{
+  content: "";
+  position: absolute;
+  width: 0.6rem;
+  height: 90%;
+  background-color: #8fc460;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.answer p{
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 2rem;
+}
+
+.accordion_item:target .answer{
+  max-height: 20rem;
+}
+
