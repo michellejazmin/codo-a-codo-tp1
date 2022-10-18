@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: 'Courier Prime', monospace;
   --primary-text: rgba(172, 171, 171, 0.803);
   --secondary-text: rgba(255, 255, 255, 0.747);
   --primary-bg: rgba(0,0,0,);
@@ -24,11 +24,9 @@ body {
   /*cambiar por la imagen se saca*/
   background-color: black;
   /*!Hacer que sea una sola imagen y cambiarla quedo feo*/
-  background-image: url('../img/planet.jpg');
+  background-image: url('/img/planet.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
-  
 }
 
 body::-webkit-scrollbar{
@@ -82,19 +80,19 @@ header {
   padding: 1rem;
   border: none;
   text-decoration: none;
-  color:rgb(165, 41, 41);
+  color:rgb(72, 41, 165);
   
 }
 
 #navbar ul li a:hover {
-  color: #41a9c4; 
-  border-bottom: 1px solid #41a9c4; /* la animación parpadea cuando el borde es de 2px, pero no con 1px */
+  color: #8f82bb; 
+  border-bottom: 1px solid #8f82bb; /* la animación parpadea cuando el borde es de 2px, pero no con 1px */
   transition: 800ms ease;
 }
 
 #navbar ul li a:active {
-  color: #6803bb;
-  border-bottom: 2px solid #6803bb;
+  color: #090169;
+  border-bottom: 2px solid #090169;
 }
 
 
@@ -128,9 +126,10 @@ header {
   width: 100%;
 }
 
-.list_item:last-child{
+/*.list_item:last-child{
   margin-top:auto;
 }
+*/
 
 .item_link{
   display: flex;
@@ -173,29 +172,7 @@ header {
 
 /*----------------------------------*/
 
-h1 {
-  font-size: 6rem;  
-  text-align: center;
-  color:rgb(165, 41, 41);
-}
 
-.h1contacto{
-  margin-top: 50px;
-}
-
-h2{
-  margin: 30px;
-  color:rgb(165, 41, 41);
-  text-align: center;
-}
-
-p{
-  text-align:center;
-  color:rgb(165, 41, 41);
-  text-align: center;
-  margin: 20px;
-
-}
 
 .formu-col{
   color:rgb(165, 41, 41);
@@ -237,7 +214,7 @@ footer{
 }
 
 .footer_bar{
-  margin: 0;  /*se lo agrego poruqe o sino no me quedan centrado los iconos en el footer*/
+  margin: 0;  /*se lo agrego porque o sino no me quedan centrado los iconos en el footer*/
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -257,7 +234,7 @@ footer{
 }
 
 .footer_bar_icons:hover{
-  color: rgb(218, 30, 30);
+  color: rgb(90, 30, 218);
 }
 
 /* ---------------------------Página de formulario--------------------------- */
@@ -356,6 +333,7 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 4rem 0 4rem 0;
 }
 
 .container{
