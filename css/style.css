@@ -31,8 +31,21 @@ html{
 .titulo1{
   padding: 18rem 0rem 0rem 0rem;
   text-align: center;
-  font-size: 7.5rem;
+}
 
+.titulo_texto{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 7.5rem;
+  cursor: default;
+  filter: opacity(1);
+  transition: 500ms ease-in-out;
+}
+
+.titulo_texto:hover{
+  filter: opacity(0.8);
+  color: #ffffff;
+  font-size: 7.7rem;
 }
 
 .subtitulo1{
@@ -57,7 +70,7 @@ html{
 
 .panel4{
   padding: 1rem;
-  background-image: url('/img/agujeronegro.jpg');
+  background-image: url('/img/asteroid.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -102,7 +115,7 @@ header {
 }
 
 #navbar {
-  height: 60px;
+  height: 59px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -134,14 +147,13 @@ header {
   padding: 1rem;
   border: none;
   text-decoration: none;
-  color:rgb(85, 48, 197);
+  color:rgb(109, 61, 254);
   font-size: 16px;
-  
 }
 
 #navbar ul li a:hover {
-  color: #8f82bb; 
-  border-bottom: 1px solid #8f82bb; /* la animación parpadea cuando el borde es de 2px, pero no con 1px */
+  color: #ffffff; 
+  border-bottom: 1px solid #ffffff; /* la animación parpadea cuando el borde es de 2px, pero no con 1px */
   transition: 800ms ease;
 }
 
@@ -298,7 +310,7 @@ footer{
   text-decoration: none;
   text-align: center;
   font-size: 2.5rem;
-  border-radius: 50%;
+  border-radius: 30%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.585);
   outline: none;
   border: none;
@@ -306,11 +318,17 @@ footer{
   transition: 500ms;
 }
 
-.boton_arriba:active{
-  background-color: #0a016955;
+.boton_arriba:hover{
+  background-color: #2b295dc5;
+  border-radius: 50%;
 }
-
 /* ---------------------------Página de formulario--------------------------- */
+
+.background_contacto{
+  background-image: url('/img/earth.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .titulo_contacto{
   text-align: center;
@@ -335,7 +353,7 @@ footer{
 }
 
 .formu-col{
-  color:rgb(51, 0, 255);
+  color:rgb(164, 142, 255);
 }
 
 form {
@@ -346,7 +364,7 @@ form {
   min-width: 300px;
   margin: 0 auto 2rem;
   padding: 1em 2em;
-  background-color: #0f0f667a;
+  background-color: #0f0f66ae;
   border-radius: 16px;
 }
 
@@ -446,13 +464,18 @@ input[type="submit"], input[type="reset"] {
 
 /*---------------------------Página de FAQ---------------------------*/
 
-section{
+.background_faq{
+  background-image: url('/img/agujeronegro.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section_container{
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 4rem 0 4rem 0;
+  padding: 170px 0 170px 0;
 }
 
 .container_faq{
@@ -497,7 +520,7 @@ section{
   overflow: hidden;
   position: relative;
   background-color: #101f3f;
-  transition: max-height 750ms;
+  transition: max-height 750ms ease-in-out;
 }
 
 .answer::before{
@@ -523,9 +546,7 @@ section{
 
 
 
-
-
-@media only screen and (max-width:768px){
+@media only screen and (max-width:375px){
 
   .sidebar{
     display: none;
@@ -541,7 +562,157 @@ section{
   }
 
   #navbar {
-    height: 150px;
+    height: 146px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .panel1{
+    padding: 1rem;
+    background-image: url('/img/space1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .titulo1{
+    padding: 18rem 0rem 0rem 0rem;
+    text-align: center;
+  }
+
+  .titulo_texto{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.2rem;
+    filter: opacity(1);
+    transition: 500ms ease-in-out;
+  }
+  
+  .titulo_texto:hover{
+    filter: opacity(0.8);
+    color: #ffffff;
+    font-size: 2.4rem;
+  }
+  
+  .subtitulo1{
+    padding: 0rem 0rem 18rem 0rem;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  
+  .panel2{
+    padding: 1rem;
+    background-image: url('/img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel3{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel4{
+    padding: 1rem;
+    background-image: url('/img/asteroid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*-----------------------FAQ----------------------------------*/
+  section{
+    margin: 160px 0 1rem 0;
+  }
+  
+
+  /*---------------------------Página de about---------------------------*/
+
+  .titulos_about{
+    text-align: left;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .parrafos_about{
+    padding: 5px; 
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .parrafos_about ul{
+    display: flex;
+  }
+
+  .parrafos_about ul li{
+    margin-right: 60px;
+  }
+
+  .aboutbackground{
+    background-image: url('/img/skystar2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0px 10px 0px;
+  }
+
+  .blurbackground1{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground2{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground3{
+    margin: 0 10px 0 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  /* ---------------------------Página de formulario--------------------------- */
+
+.titulo_contacto{
+  text-align: center;
+  margin: 160px 0 5px 0;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+  margin: 5px;
+}
+
+}
+
+@media only screen and (min-width:375px) and (max-width:768px){
+
+  .sidebar{
+    display: none;
+  }
+
+  main{
+    margin: 0;
+    width: 100%;
+  }
+
+  header {
+    margin-left: 0;
+  }
+
+  #navbar {
+    height: 146px;
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
@@ -563,8 +734,20 @@ section{
   .titulo1{
     padding: 18rem 0rem 0rem 0rem;
     text-align: center;
-    font-size: 3.5rem;
+  }
+
+  .titulo_texto{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 3.3rem;
+    filter: opacity(1);
+    transition: 500ms ease-in-out;
+  }
   
+  .titulo_texto:hover{
+    filter: opacity(0.8);
+    color: #ffffff;
+    font-size: 3.5rem;
   }
   
   .subtitulo1{
@@ -589,7 +772,135 @@ section{
   
   .panel4{
     padding: 1rem;
-    background-image: url('/img/agujeronegro.jpg');
+    background-image: url('/img/asteroid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*-----------------------FAQ----------------------------------*/
+  section{
+    margin: 160px 0 1rem 0;
+  }
+  
+
+  /*---------------------------Página de about---------------------------*/
+
+  .titulos_about{
+    text-align: left;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .parrafos_about{
+    padding: 5px; 
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .parrafos_about ul{
+    display: flex;
+  }
+
+  .parrafos_about ul li{
+    margin-right: 60px;
+  }
+
+  .aboutbackground{
+    background-image: url('/img/skystar2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0px 10px 0px;
+  }
+
+  .blurbackground1{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground2{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground3{
+    margin: 0 10px 0 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  /* ---------------------------Página de formulario--------------------------- */
+
+.titulo_contacto{
+  text-align: center;
+  margin: 160px 0 5px 0;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+  margin: 5px;
+}
+
+}
+
+@media only screen and (min-width:768px) and (max-width:912px){
+
+
+  
+
+  .panel1{
+    padding: 1rem;
+    background-image: url('/img/space1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .titulo1{
+    padding: 18rem 0rem 0rem 0rem;
+    text-align: center;
+  }
+
+  .titulo_texto{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 5.7rem;
+    filter: opacity(1);
+    transition: 500ms ease-in-out;
+  }
+  
+  .titulo_texto:hover{
+    filter: opacity(0.8);
+    color: #ffffff;
+    font-size: 5.9rem;
+  }
+  
+  .subtitulo1{
+    padding: 0rem 0rem 18rem 0rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  
+  .panel2{
+    padding: 1rem;
+    background-image: url('/img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel3{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel4{
+    padding: 1rem;
+    background-image: url('/img/asteroid.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -22,9 +22,9 @@ function mostrarDatos(resultado){
 
         cad += `
         <div class="tarjeta card">
-                <h2>Nombre: ${elemento.name}</h2>
+                <h2>Id: ${elemento.id}</h2>
             <div class="cuerpo contenido-card">
-                <h4>Id: ${elemento.id}</h4>
+                <h4>Nombre: ${elemento.name}</h4>
                 <p> Es Peligroso: ${elemento.is_potentially_hazardous_asteroid}</p>
                 <p>Diametro: ${elemento.estimated_diameter.meters.estimated_diameter_max} metros</p>
                     

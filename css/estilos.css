@@ -7,13 +7,25 @@
 }
 /*Cards*/
 
+.container1{
+	margin: 0 auto;
+	padding: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+}
+
 .container{
 	margin: 0;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: 20px;
+	justify-content: center;
+	width: 100%;
+	max-width: 6000px;
+
 }
+
 .container-card{
 	width: 100%;
 	display: flex;
@@ -31,7 +43,8 @@
 }
 
 .card{
-	width: 400px;
+	width: 30%;
+	flex-wrap: wrap;
 	margin: 20px;
 	border-radius: 6px; 
 	overflow: hidden;
