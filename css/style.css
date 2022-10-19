@@ -997,11 +997,49 @@ input[type="submit"], input[type="reset"] {
 
 /* --------------------Página de recomendados---------------------- */
 
+.youtube-video {
+  display: block;
+  margin: 20px auto;
+}
+
 #contenedor-recomendados {
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: min(800px, 80%);
+  height: auto;
+  margin: 30px auto;
+}
+
+.recomendado-tarjeta {
+  min-width: 300px;
+  height: min(500px, 50vh);
+  flex: 0;
+  margin: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   justify-content: space-evenly;
-  align-items: baseline;
-  gap: 2rem;
-  width: min(800px, 80%)
+  align-items: center;
+  background-color: #05051b;
+  border-radius: 16px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
+}
+
+.recomendado-tarjeta a {
+  text-decoration: none;
+  color: rgb(164, 142, 255);
+}
+
+.recomendado-tarjeta a:hover {
+  color: rgb(109, 61, 254);
+}
+
+.recomendado-tarjeta img {
+  max-width: 85%;
+  max-height: 70%;
+  border-radius: 16px;
 }
