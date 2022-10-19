@@ -19,10 +19,7 @@ html{
 
 
 /*---------------------------INDEX---------------------------*/
-.space{
-  padding: 1rem;
-  background-color: #05051b;
-}
+
 
 .panel1{
   padding: 1rem;
@@ -101,14 +98,16 @@ header {
   z-index: 2;
   width: 100%;
   position: fixed;
-  margin-left: 2.5rem;
+  margin-left: 50px;
 }
 
 #navbar {
-  height: 4rem;
-  display: block;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 0;
-  padding: 10px;
+  padding: 10px 0 10px 0;
   border: none;
   background-color: rgba(0, 0, 0, 0.829);
   position: sticky;
@@ -136,6 +135,7 @@ header {
   border: none;
   text-decoration: none;
   color:rgb(85, 48, 197);
+  font-size: 16px;
   
 }
 
@@ -153,7 +153,7 @@ header {
 
 /*-------------------------------*/
 .sidebar{
-  margin-top: 4rem; /*la altura del header para que no se sobrelapens*/
+  margin-top: 60px; /*la altura del header para que no se sobrelapens*/
   padding-bottom: 5rem; /*debe ser igual que el de arriba, para que el icono de abajo de todo se vea*/
   width: 7rem;
   height: 100vh;
@@ -246,7 +246,7 @@ header p {
 main{
   overflow: auto;
   /*!Para que la barra no sobralape el texto*/
-  margin: 4rem 0rem 0rem 7rem;
+  margin: 60px 0rem 0rem 7rem;
   background-image: url(./img/asteroid.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -393,21 +393,49 @@ input[type="submit"], input[type="reset"] {
 .titulos_about{
   text-align: left;
   padding: 1rem 1rem 1rem 1rem;
-  color: aliceblue;
-  font-size: 4.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
 }
+
 .parrafos_about{
   padding: 1rem 1rem 1rem 1rem; 
   font-size: 1.5rem;
-  color: aquamarine;
+  color: rgb(255, 255, 255);
   text-align: left;
   text-shadow: 2px 2px 8px black;
 }
 
+.parrafos_about ul{
+  display: flex;
+}
+
+.parrafos_about ul li{
+  margin-right: 60px;
+}
+
 .aboutbackground{
-  background-image: url('/img/skystar.jpg');
+  background-image: url('/img/skystar2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 50px;
+}
+
+.blurbackground1{
+  margin: 0 50px 50px 50px;
+  background-color: #0000003a;
+  border-radius: 40px;
+}
+
+.blurbackground2{
+  margin: 0 50px 50px 50px;
+  background-color: #0000003a;
+  border-radius: 40px;
+}
+
+.blurbackground3{
+  margin: 0 50px 0 50px;
+  background-color: #0000003a;
+  border-radius: 40px;
 }
 
 /*---------------------------Página de FAQ---------------------------*/
@@ -421,7 +449,7 @@ section{
   margin: 4rem 0 4rem 0;
 }
 
-.container{
+.container_faq{
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
@@ -429,7 +457,7 @@ section{
 }
 
 .accordion_item{
-  background-color: #283042;
+  background-color: #0b2768;
   border-radius: 0.4rem;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -438,9 +466,9 @@ section{
 
 .accordion_link{
   font-size: 1.6rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  background-color: #283042;
+  background-color: #0b2768;
   width: 100%;
   display: flex;
   align-items: center;
@@ -450,7 +478,7 @@ section{
 
 /*icono*/
 .accordion_link i{
-  color:azure;
+  color:rgb(255, 255, 255);
   padding: 0.5rem;
 }
 
@@ -462,7 +490,7 @@ section{
   max-height: 0;
   overflow: hidden;
   position: relative;
-  background-color: #212838;
+  background-color: #101f3f;
   transition: max-height 750ms;
 }
 
@@ -471,7 +499,7 @@ section{
   position: absolute;
   width: 0.6rem;
   height: 90%;
-  background-color: #8fc460;
+  background-color: #000000;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -479,7 +507,7 @@ section{
 
 .answer p{
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.719);
   padding: 2rem;
 }
 
@@ -488,3 +516,132 @@ section{
 }
 
 
+
+
+
+@media only screen and (max-width:768px){
+
+  .sidebar{
+    display: none;
+  }
+
+  main{
+    margin: 0;
+    width: 100%;
+  }
+
+  header {
+    margin-left: 0;
+  }
+
+  #navbar {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .panel1{
+    padding: 1rem;
+    background-image: url('/img/space1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .titulo1{
+    padding: 18rem 0rem 0rem 0rem;
+    text-align: center;
+    font-size: 3.5rem;
+  
+  }
+  
+  .subtitulo1{
+    padding: 0rem 0rem 18rem 0rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .panel2{
+    padding: 1rem;
+    background-image: url('/img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel3{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel4{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*-----------------------FAQ----------------------------------*/
+  section{
+    margin: 160px 0 1rem 0;
+  }
+  
+
+  /*---------------------------Página de about---------------------------*/
+
+  .titulos_about{
+    text-align: left;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .parrafos_about{
+    padding: 5px; 
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .parrafos_about ul{
+    display: flex;
+  }
+
+  .parrafos_about ul li{
+    margin-right: 60px;
+  }
+
+  .aboutbackground{
+    background-image: url('/img/skystar2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0px 10px 0px;
+  }
+
+  .blurbackground1{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground2{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground3{
+    margin: 0 10px 0 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+}
