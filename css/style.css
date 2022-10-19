@@ -228,12 +228,6 @@ header {
 /*----------------------------------*/
 
 
-
-.formu-col{
-  color:rgb(165, 41, 41);
-}
-
-
 header p {
   margin: 10px 0 10px 20px;
   padding: 0;
@@ -318,18 +312,30 @@ footer{
 
 /* ---------------------------Página de formulario--------------------------- */
 
+.titulo_contacto{
+  text-align: center;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+}
+
 .form-title {
   margin-top: 1em;
 }
 
 .form-title, .form-subtitle {
   text-align: center;
-  color: whitesmoke;
+  color: rgb(255, 255, 255);
 }
 
 .form-subtitle {
   margin-bottom: 2rem;
   font-size: 0.8rem;
+}
+
+.formu-col{
+  color:rgb(51, 0, 255);
 }
 
 form {
@@ -340,7 +346,7 @@ form {
   min-width: 300px;
   margin: 0 auto 2rem;
   padding: 1em 2em;
-  background-color: #05051b;
+  background-color: #0f0f667a;
   border-radius: 16px;
 }
 
@@ -357,13 +363,13 @@ input, textarea, select {
   margin: 0.5rem 0 0 0;
   width: 100%;
   min-height: 2em;
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
   border-radius: 8px;
 }
 
 input, textarea {
   border: 1px solid #05051b;
-  color: #2e2e2e;
+  color: #ffffff;
 }
 
 textarea {
@@ -457,7 +463,7 @@ section{
 }
 
 .accordion_item{
-  background-color: #0b2768;
+  background-color: #0e3693;
   border-radius: 0.4rem;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -468,7 +474,7 @@ section{
   font-size: 1.6rem;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  background-color: #0b2768;
+  background-color: #0e3693;
   width: 100%;
   display: flex;
   align-items: center;
@@ -643,5 +649,17 @@ section{
     background-color: #0000003a;
     border-radius: 40px;
   }
+
+  /* ---------------------------Página de formulario--------------------------- */
+
+.titulo_contacto{
+  text-align: center;
+  margin: 160px 0 5px 0;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+  margin: 5px;
+}
 
 }
