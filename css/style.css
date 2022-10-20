@@ -486,7 +486,7 @@ input[type="submit"], input[type="reset"] {
 }
 
 .accordion_item{
-  background-color: #0e3693;
+  background-color: #232323;
   border-radius: 0.4rem;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -497,12 +497,16 @@ input[type="submit"], input[type="reset"] {
   font-size: 1.6rem;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  background-color: #0e3693;
+  background-color: #232323;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+}
+
+.accordion_link:hover{
+  color: #ffffff;
 }
 
 /*icono*/
@@ -519,7 +523,7 @@ input[type="submit"], input[type="reset"] {
   max-height: 0;
   overflow: hidden;
   position: relative;
-  background-color: #101f3f;
+  background-color: #000000;
   transition: max-height 750ms ease-in-out;
 }
 
@@ -528,7 +532,7 @@ input[type="submit"], input[type="reset"] {
   position: absolute;
   width: 0.6rem;
   height: 90%;
-  background-color: #000000;
+  background-color: #ffffff;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -1005,11 +1009,12 @@ input[type="submit"], input[type="reset"] {
 #contenedor-recomendados {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center; /*cambien el flexstart por center pora que quede en el centrode la pagina siempre*/
   align-items: center;
   gap: 1rem;
   width: min(800px, 80%);
-  height: auto;
+  width: 90%; /*le puse 90% asientran al menos 3 cajitas por fila y para cuando hagamos el @media sea mas facil de manipular*/
+  height: auto; /*tal vez vamos a tenerle que ajustar nosotros la altura, porque si lo pasamos a celular nos va a quedar una caja muy larga*/
   margin: 30px auto;
 }
 
