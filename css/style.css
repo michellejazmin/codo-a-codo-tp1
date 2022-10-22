@@ -250,12 +250,8 @@ header p {
 }
 
 main{
-  overflow: auto;
-  /*!Para que la barra no sobralape el texto*/
+  /*overflow: auto;*/
   margin: 60px 0rem 0rem 7rem;
-  background-image: url(./img/asteroid.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   z-index: 0;
 }
 
@@ -491,6 +487,11 @@ input[type="submit"], input[type="reset"] {
   margin-bottom: 1rem;
   padding: 1rem;
   box-shadow: 0.5rem 2px 0.5rem rgba(0, 0, 0, 0.1);
+  transition: 500ms ease-in-out;
+}
+
+.accordion_item:hover{
+  scale: 103%;
 }
 
 .accordion_link{
@@ -550,7 +551,128 @@ input[type="submit"], input[type="reset"] {
 
 
 
-@media only screen and (max-width:375px){
+
+
+/* ----------------------------Página 404--------------------------------- */
+
+#agujero-negro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  height: 100vh;
+  margin: 0 auto;
+  width: 80%;
+  background-image: url('/img/astronauta.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+#texto_agujero-negro{
+  text-align: center;
+  text-shadow: 2px 2px 8px black;
+}
+
+#volver-a-inicio {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #090169;
+  color: #ffffff;
+  transition: 500ms ease-in-out;
+}
+
+#volver-a-inicio:hover {
+  scale: 110%;
+  color: #090169;
+  background-color: #ffffff;
+}
+
+
+#volver-a-inicio:active {
+  filter: opacity(50%);
+  font-weight: 700;
+}
+
+/* --------------------Página de recomendados---------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.recomendado_tarjeta{
+  width: 30%;
+  height: 25vw;
+  margin: 5px;
+  background-color: #201f41;
+  border-radius: 5px;
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.recomendado_tarjeta:hover{
+  scale: 103%;
+}
+
+.recomendado_tarjeta img{
+  width: 100%;
+  height: 70%;
+  border-radius: 5px;
+}
+
+.texto_tarjeta{
+  padding-right: 10px ;
+  padding-left: 10px;
+  padding-top: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+.tema{
+  text-align: center;
+  margin: 0 auto 0 0;
+  padding: 0 5px 0 5px;
+  font-size: 1vw;  
+  letter-spacing: 4px;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  text-decoration: none;
+}
+
+.tema a{
+  text-decoration: none;
+  color: #ffffff;
+  transition: 200ms ease-in-out;
+}
+
+.tema a:hover{
+  font-weight: 1000;
+}
+
+.titulo{
+  margin-top: 1%;
+  font-weight: 800;
+  font-size: 1.5vw;
+  text-decoration: none;
+}
+
+.titulo a{
+  text-decoration: none;
+  color: #ffffff;
+  transition: 200ms ease-in-out;
+}
+
+.titulo a:hover{
+  filter: opacity(75%);
+}
+
+@media only screen and (max-width:360px){
 
   .sidebar{
     display: none;
@@ -575,6 +697,10 @@ input[type="submit"], input[type="reset"] {
   #navbar ul {
     margin: 0;
     padding: 0;
+  }
+
+  #navbar ul li a {
+    font-size: 15px;
   }
   
   .panel1{
@@ -698,9 +824,60 @@ input[type="submit"], input[type="reset"] {
   margin: 5px;
 }
 
+/* ---------------------------Página de RECOMENDADOS--------------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  padding: 150px 0 0 0;
 }
 
-@media only screen and (min-width:375px) and (max-width:768px){
+.recomendado_tarjeta{
+  width: 45%;
+  height: 50vw;
+  margin: 5px;
+  background-color: #201f41;
+  border-radius: 5px;
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.recomendado_tarjeta img{
+  width: 100%;
+  height: 70%;
+}
+
+.texto_tarjeta{
+  padding-right: 7.5px ;
+  padding-left: 7.5px;
+  padding-top: 3%;
+}
+.tema{
+  padding: 0px 5px 0px 5px;
+  font-size: 2vw;
+  letter-spacing: 4px;
+}
+
+.titulo{
+  margin-top: 2%;
+  font-weight: 700;
+  font-size: 2.7vw;
+}
+
+#agujero-negro {
+  background-size: 100%;
+  gap: 1.5rem;
+}
+#texto_agujero-negro{
+  font-size: 20px;
+}
+
+#volver-a-inicio {
+  padding: 0.6rem;
+  border-radius: 8px;
+}
+
+}
+@media only screen and (min-width:360px) and (max-width:432px){
 
   .sidebar{
     display: none;
@@ -716,7 +893,7 @@ input[type="submit"], input[type="reset"] {
   }
 
   #navbar {
-    height: 146px;
+    height: 102px;
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
@@ -725,6 +902,10 @@ input[type="submit"], input[type="reset"] {
   #navbar ul {
     margin: 0;
     padding: 0;
+  }
+
+  #navbar ul li a{
+    font-size: 12px;
   }
   
 
@@ -849,9 +1030,454 @@ input[type="submit"], input[type="reset"] {
   margin: 5px;
 }
 
+
+/* ---------------------------Página de RECOMENDADOS--------------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  padding: 150px 0 0 0;
 }
 
-@media only screen and (min-width:768px) and (max-width:912px){
+.recomendado_tarjeta{
+  width: 45%;
+  height: 50vw;
+  margin: 5px;
+  background-color: #201f41;
+  border-radius: 5px;
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.recomendado_tarjeta img{
+  width: 100%;
+  height: 70%;
+}
+
+.texto_tarjeta{
+  padding-right: 7.5px ;
+  padding-left: 7.5px;
+  padding-top: 3%;
+}
+.tema{
+  padding: 0px 5px 0px 5px;
+  font-size: 2vw;
+  letter-spacing: 4px;
+}
+
+.titulo{
+  margin-top: 2%;
+  font-weight: 700;
+  font-size: 2.7vw;
+}
+
+/* ---------------------------Página de RECOMENDADOS--------------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  padding: 114px 0 0 0;
+}
+
+.recomendado_tarjeta{
+  width: 45%;
+  height: 50vw;
+  margin: 5px;
+  background-color: #201f41;
+  border-radius: 5px;
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.recomendado_tarjeta img{
+  width: 100%;
+  height: 70%;
+}
+
+.texto_tarjeta{
+  padding-right: 7.5px ;
+  padding-left: 7.5px;
+  padding-top: 3%;
+}
+.tema{
+  padding: 0px 5px 0px 5px;
+  font-size: 2vw;
+  letter-spacing: 4px;
+}
+
+.titulo{
+  margin-top: 2%;
+  font-weight: 700;
+  font-size: 2.7vw;
+}
+
+#agujero-negro {
+  background-size: 90%;
+}
+#texto_agujero-negro{
+  font-size: 24px;
+}
+
+#volver-a-inicio {
+  padding: 0.7rem;
+  border-radius: 8px;
+}
+
+}
+@media only screen and (min-width:432px) and (max-width:743px){
+
+  .sidebar{
+    display: none;
+  }
+
+  main{
+    margin: 0;
+    width: 100%;
+  }
+
+  header {
+    margin-left: 0;
+  }
+
+  #navbar {
+    height: 104px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .panel1{
+    padding: 1rem;
+    background-image: url('/img/space1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .titulo1{
+    padding: 18rem 0rem 0rem 0rem;
+    text-align: center;
+  }
+
+  .titulo_texto{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 3.3rem;
+    filter: opacity(1);
+    transition: 500ms ease-in-out;
+  }
+  
+  .titulo_texto:hover{
+    filter: opacity(0.8);
+    color: #ffffff;
+    font-size: 3.5rem;
+  }
+  
+  .subtitulo1{
+    padding: 0rem 0rem 18rem 0rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .panel2{
+    padding: 1rem;
+    background-image: url('/img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel3{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel4{
+    padding: 1rem;
+    background-image: url('/img/asteroid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*-----------------------FAQ----------------------------------*/
+  section{
+    margin: 160px 0 1rem 0;
+  }
+  
+
+  /*---------------------------Página de about---------------------------*/
+
+  .titulos_about{
+    text-align: left;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .parrafos_about{
+    padding: 5px; 
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .parrafos_about ul{
+    display: flex;
+  }
+
+  .parrafos_about ul li{
+    margin-right: 60px;
+  }
+
+  .aboutbackground{
+    background-image: url('/img/skystar2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0px 10px 0px;
+  }
+
+  .blurbackground1{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground2{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground3{
+    margin: 0 10px 0 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  /* ---------------------------Página de formulario--------------------------- */
+
+.titulo_contacto{
+  text-align: center;
+  margin: 160px 0 5px 0;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+  margin: 5px;
+}
+
+/* ---------------------------Página de RECOMENDADOS--------------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  padding: 100px 0 0 0;
+}
+
+.recomendado_tarjeta img{
+  width: 100%;
+  height: 70%;
+}
+
+.texto_tarjeta{
+  padding-right: 10px ;
+  padding-left: 10px;
+  padding-top: 3%;
+}
+.tema{
+  padding: 0px 5px 0px 5px;
+  font-size: 1vw;
+  letter-spacing: 4px;
+}
+
+.titulo{
+  margin-top: 2.5%;
+  font-weight: 700;
+  font-size: 1.5vw;
+}
+
+
+
+#agujero-negro {
+  background-size: 75%;
+}
+#texto_agujero-negro{
+  font-size: 32px;
+}
+
+
+}
+@media only screen and (min-width:743px) and (max-width:877px){
+
+  .sidebar{
+    display: none;
+  }
+
+  main{
+    margin: 0;
+    width: 100%;
+  }
+
+  header {
+    margin-left: 0;
+  }
+
+  #navbar {
+    height: 58px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .panel1{
+    padding: 1rem;
+    background-image: url('/img/space1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .titulo1{
+    padding: 18rem 0rem 0rem 0rem;
+    text-align: center;
+  }
+
+  .titulo_texto{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 3.3rem;
+    filter: opacity(1);
+    transition: 500ms ease-in-out;
+  }
+  
+  .titulo_texto:hover{
+    filter: opacity(0.8);
+    color: #ffffff;
+    font-size: 3.5rem;
+  }
+  
+  .subtitulo1{
+    padding: 0rem 0rem 18rem 0rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .panel2{
+    padding: 1rem;
+    background-image: url('/img/stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel3{
+    padding: 1rem;
+    background-image: url('/img/agujeronegro2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .panel4{
+    padding: 1rem;
+    background-image: url('/img/asteroid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*-----------------------FAQ----------------------------------*/
+  section{
+    margin: 160px 0 1rem 0;
+  }
+  
+
+  /*---------------------------Página de about---------------------------*/
+
+  .titulos_about{
+    text-align: left;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .parrafos_about{
+    padding: 5px; 
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .parrafos_about ul{
+    display: flex;
+  }
+
+  .parrafos_about ul li{
+    margin-right: 60px;
+  }
+
+  .aboutbackground{
+    background-image: url('/img/skystar2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0px 10px 0px;
+  }
+
+  .blurbackground1{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground2{
+    margin: 0 10px 10px 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+  .blurbackground3{
+    margin: 0 10px 0 10px;
+    background-color: #0000003a;
+    border-radius: 40px;
+  }
+
+/* ---------------------------Página de formulario--------------------------- */
+
+.titulo_contacto{
+  text-align: center;
+  margin: 160px 0 5px 0;
+}
+
+.subtitulo_contacto{
+  text-align: center;
+  margin: 5px;
+}
+
+/* ---------------------------Página de RECOMENDADOS--------------------------- */
+
+.contenedor_recomendados{
+  width: 95%;
+  padding: 100px 0 0 0;
+}
+
+.tema{
+  padding: 0px 5px 0px 5px;
+  font-size: 1vw;
+  letter-spacing: 4px;
+}
+
+.titulo{
+  margin-top: 1%;
+  font-size: 1.55vw;
+}
+
+}
+@media only screen and (min-width:877px) and (max-width:912px){
 
 
   
@@ -977,74 +1603,4 @@ input[type="submit"], input[type="reset"] {
   margin: 5px;
 }
 
-}
-
-
-/* ----------------------------Página 404--------------------------------- */
-
-#agujero-negro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3.5rem;
-  width: min(700px, 80%);
-  height: 100vh;
-  margin: 0 auto;
-}
-
-#volver-a-inicio {
-  padding: .8rem;
-  border-radius: 8px;
-}
-
-
-/* --------------------Página de recomendados---------------------- */
-
-.youtube-video {
-  display: block;
-  margin: 20px auto;
-}
-
-#contenedor-recomendados {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center; /*cambien el flexstart por center pora que quede en el centrode la pagina siempre*/
-  align-items: center;
-  gap: 1rem;
-  width: min(800px, 80%);
-  width: 90%; /*le puse 90% asientran al menos 3 cajitas por fila y para cuando hagamos el @media sea mas facil de manipular*/
-  height: auto; /*tal vez vamos a tenerle que ajustar nosotros la altura, porque si lo pasamos a celular nos va a quedar una caja muy larga*/
-  margin: 30px auto;
-}
-
-.recomendado-tarjeta {
-  min-width: 300px;
-  height: min(500px, 50vh);
-  flex: 0;
-  margin: 0;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #05051b;
-  border-radius: 16px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
-}
-
-.recomendado-tarjeta a {
-  text-decoration: none;
-  color: rgb(164, 142, 255);
-}
-
-.recomendado-tarjeta a:hover {
-  color: rgb(109, 61, 254);
-}
-
-.recomendado-tarjeta img {
-  max-width: 85%;
-  max-height: 70%;
-  border-radius: 16px;
 }
